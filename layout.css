@@ -12,55 +12,114 @@ header {
     padding: 1rem;
 }
 main {
-    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    background-color: darkorange;
     padding: 1rem;
+}
+.navigointi {
+    display: none;
 }
 aside {
-    background-color: green;
-    padding: 1rem;
-}
-.aside {
-    background-color: rgb(35, 86, 35);
+    background-color: mediumseagreen;
     padding: 1rem;
 }
 .aside-2 {
-    background-color: greenyellow;
+    background-color: seagreen;
     padding: 1rem;
 }
 footer {
-    background-color: ;
+    background-color: lightgreen;
     padding: 1rem;
 }
 /* Responsiivisuus */
 .parent {
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .parent > * {
-
+    flex-basis: 100%;
+    flex-grow: 1;
 }
-.parent .aside-1 {
-
+.icons {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
 }
-.parent main {
-
+.facebook {
+    font-size: 2rem;
+    color: white;
+    background-color: blue;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-.parent .aside-2 {
-
+.twitter {
+    font-size: 2rem;
+    color: white;
+    background-color: skyblue;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.email {
+    font-size: 2rem;
+    color: white;
+    background-color: gray;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 /* Tablet näkymä */
-
 @media only screen and (min-width: 426px){
-    body {
-        background-color: lightblue;
+    .parent {
+        flex-direction: row;
+    }
+    .aside-1 {
+        flex-basis: auto;
+    }
+    .aside-2 {
+        flex-basis: auto;
+    }
+    .navigointi{
+        display: flex;
+        flex-direction: row;
+    }
+    .navigointi li {
+        border: 1px solid #000;
+        background-color: rgb(244, 242, 242);
+        padding: 1rem;
+        width: 100%;
     }
 }
-@media only screen and (min-width: 426px){
-    body {
-        background-color: lightblue;
+@media only screen and (min-width: 769px){
+    .aside-1 {
+        order: 1;
+        flex-basis: 0px;
     }
-}
-@media only screen and (min-width: 426px){
-    body {
-        background-color: lightblue;
+    .parent .mainWithIcons {
+        order: 2;
+        flex-basis: 400px;
+    }
+    .aside-2 {
+        order: 3;
+        flex-basis: 0px;
+    }
+    footer {
+        order: 4;
+    }
+    .navigointi{
+        display: flex;
+        flex-direction: row;
+    }
+    .navigointi li {
+        border: 1px solid #000;
+        background-color: rgb(244, 242, 242);
+        padding: 1rem;
+        width: 100%;
     }
 }
